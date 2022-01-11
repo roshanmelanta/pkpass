@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: pk-keeper
+    version: 0.0.1
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    password: segreto
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    hikari:
+      minimumIdle: 5
+      maximumPoolSize: 20
+      connectionTimeout: 30000
+      idleTimeout: 25000
+      maxLifetime: 30000
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    properties:
+      hibernate:
+        default_schema: pk_keeper
+server:
+  port: 8988
+  error:
+    include-stacktrace: never
+logging:
+  level:
+    root: info
